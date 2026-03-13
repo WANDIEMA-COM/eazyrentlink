@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Futuristic Agency | Property Management Kenya</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        
+        :root {
+            --primary: #0f172a;
+            --accent: #06b6d4;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            scroll-behavior: smooth;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+
+        .modern-shadow {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+        }
+
+        .nav-link:hover {
+            color: var(--accent);
+        }
+
+        .btn-futuristic {
+            background: var(--accent);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-futuristic:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(6, 182, 212, 0.4);
+        }
+
+        .section-tab.active {
+            border-bottom: 3px solid var(--accent);
+            color: var(--accent);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-slate-900 rounded-lg flex items-center justify-center text-cyan-400">
+                        <i class="fas fa-cube text-xl"></i>
+                    </div>
+                    <span class="text-xl font-800 tracking-tight text-slate-900">REAL<span class="text-cyan-500 underline decoration-2 underline-offset-4">FUTURISTIC</span></span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8 font-medium">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#landlords" class="nav-link">For Landlords</a>
+                    <a href="#listings" class="nav-link">Properties</a>
+                    <a href="#dashboard" class="nav-link">Online Office</a>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <button onclick="showPortal('tenant')" class="hidden sm:block text-sm font-semibold text-slate-600 hover:text-cyan-600 transition">Tenant Portal</button>
+                    <a href="#contact" class="btn-futuristic text-white px-6 py-2.5 rounded-full text-sm font-bold">List Property</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 hero-gradient text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="inline-block px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-bold uppercase tracking-widest mb-6">
+                        Kenya's #1 Digital Property Agent
+                    </div>
+                    <h1 class="text-5xl lg:text-7xl font-800 mb-6 leading-tight">
+                        The Evolution of <span class="text-cyan-400">Rent</span> Collection.
+                    </h1>
+                    <p class="text-xl text-slate-300 mb-8 leading-relaxed max-w-lg">
+                        We don't just manage properties; we engineer peace of mind. Transparent, tech-driven, and fair for both landlords and tenants in Kenya.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="btn-futuristic px-8 py-4 rounded-xl font-bold text-white text-lg">
+                            Register as Landlord
+                        </button>
+                        <button class="bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur px-8 py-4 rounded-xl font-bold text-white text-lg transition">
+                            Browse Listings
+                        </button>
+                    </div>
+                    
+                    <div class="mt-12 flex items-center gap-6">
+                        <div class="flex -space-x-3">
+                            <img src="https://i.pravatar.cc/100?u=1" class="w-10 h-10 rounded-full border-2 border-slate-900" alt="Client">
+                            <img src="https://i.pravatar.cc/100?u=2" class="w-10 h-10 rounded-full border-2 border-slate-900" alt="Client">
+                            <img src="https://i.pravatar.cc/100?u=3" class="w-10 h-10 rounded-full border-2 border-slate-900" alt="Client">
+                        </div>
+                        <p class="text-sm text-slate-400 font-medium">Trusted by 500+ Landlords in Nairobi & Mombasa</p>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -top-20 -right-20 w-64 h-64 bg-cyan-500/20 rounded-full blur-3xl"></div>
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Modern Building" class="rounded-3xl shadow-2xl relative z-10 border border-white/10">
+                    <!-- Stat Card Overlay -->
+                    <div class="absolute -bottom-6 -left-6 glass-card p-6 rounded-2xl shadow-xl z-20 hidden md:block border border-slate-200">
+                        <div class="flex items-center gap-4">
+                            <div class="p-3 bg-green-100 rounded-lg text-green-600">
+                                <i class="fas fa-chart-line text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 font-bold uppercase">Collections This Month</p>
+                                <p class="text-2xl font-800 text-slate-900">Ksh 4.2M</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-800 text-slate-900 mb-4">Why Real Futuristic?</h2>
+                <div class="w-20 h-1.5 bg-cyan-500 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="p-8 rounded-3xl bg-slate-50 hover:bg-white hover:shadow-2xl hover:shadow-cyan-100 transition-all border border-transparent hover:border-slate-100">
+                    <div class="w-14 h-14 bg-cyan-100 text-cyan-600 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-bolt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Instant Payouts</h3>
+                    <p class="text-slate-600 leading-relaxed">No more waiting for weeks. Once the tenant pays via M-Pesa, your funds are settled instantly to your bank or mobile wallet.</p>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="p-8 rounded-3xl bg-slate-50 hover:bg-white hover:shadow-2xl hover:shadow-cyan-100 transition-all border border-transparent hover:border-slate-100">
+                    <div class="w-14 h-14 bg-indigo-100 text-indigo-600 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-halved text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Strict Vetting</h3>
+                    <p class="text-slate-600 leading-relaxed">Our futuristic AI-assisted vetting process ensures you only get high-quality tenants who pay on time and respect your property.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="p-8 rounded-3xl bg-slate-50 hover:bg-white hover:shadow-2xl hover:shadow-cyan-100 transition-all border border-transparent hover:border-slate-100">
+                    <div class="w-14 h-14 bg-orange-100 text-orange-600 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-tools text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Proactive Maintenance</h3>
+                    <p class="text-slate-600 leading-relaxed">We manage repairs digitally. Tenants upload photos, we get quotes, you approve in one click from your Online Office.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Online Office Dashboard (The Demo) -->
+    <section id="dashboard" class="py-24 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+                <div>
+                    <h2 class="text-4xl font-800 text-slate-900">Your Online Office</h2>
+                    <p class="text-slate-500 mt-2 font-medium">Manage your Kenyan portfolio from anywhere in the world.</p>
+                </div>
+                <div class="flex bg-white p-1 rounded-xl shadow-sm border border-slate-200">
+                    <button class="px-6 py-2 rounded-lg font-bold text-sm bg-slate-900 text-white">Landlord View</button>
+                    <button class="px-6 py-2 rounded-lg font-bold text-sm text-slate-500 hover:bg-slate-50">Tenant View</button>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-8">
+                <!-- Sidebar Tools -->
+                <div class="lg:col-span-3 space-y-4">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                        <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-6">Quick Actions</p>
+                        <div class="space-y-2">
+                            <button class="w-full flex items-center gap-3 p-3 rounded-xl hover:bg-cyan-50 hover:text-cyan-600 text-slate-600 transition font-semibold text-sm">
+                                <i class="fas fa-plus-circle"></i> Add New Unit
+                            </button>
+                            <button class="w-full flex items-center gap-3 p-3 rounded-xl hover:bg-cyan-50 hover:text-cyan-600 text-slate-600 transition font-semibold text-sm">
+                                <i class="fas fa-file-invoice-dollar"></i> Generate Statement
+                            </button>
+                            <button class="w-full flex items-center gap-3 p-3 rounded-xl hover:bg-cyan-50 hover:text-cyan-600 text-slate-600 transition font-semibold text-sm">
+                                <i class="fas fa-wrench"></i> 3 Pending Repairs
+                            </button>
+                            <button class="w-full flex items-center gap-3 p-3 rounded-xl hover:bg-cyan-50 hover:text-cyan-600 text-slate-600 transition font-semibold text-sm">
+                                <i class="fas fa-envelope"></i> Message Tenants
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Dashboard Card -->
+                <div class="lg:col-span-9">
+                    <div class="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden">
+                        <div class="p-8 border-b border-slate-100 flex justify-between items-center">
+                            <div>
+                                <h4 class="font-800 text-xl text-slate-900">Westlands Heights Apartment</h4>
+                                <p class="text-sm text-slate-500">Property ID: #RFA-4402</p>
+                            </div>
+                            <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold">100% Occupied</span>
+                        </div>
+                        <div class="p-8">
+                            <div class="grid sm:grid-cols-3 gap-6 mb-8">
+                                <div class="p-6 bg-slate-50 rounded-2xl">
+                                    <p class="text-xs font-bold text-slate-400 uppercase mb-1">Total Collected</p>
+                                    <p class="text-2xl font-800 text-slate-900">Ksh 450,000</p>
+                                    <p class="text-xs text-green-600 mt-2"><i class="fas fa-arrow-up mr-1"></i> 12% vs last month</p>
+                                </div>
+                                <div class="p-6 bg-slate-50 rounded-2xl">
+                                    <p class="text-xs font-bold text-slate-400 uppercase mb-1">Pending Rent</p>
+                                    <p class="text-2xl font-800 text-slate-900 text-red-500">Ksh 45,000</p>
+                                    <p class="text-xs text-slate-500 mt-2">2 units overdue</p>
+                                </div>
+                                <div class="p-6 bg-slate-50 rounded-2xl">
+                                    <p class="text-xs font-bold text-slate-400 uppercase mb-1">Service Fee (7%)</p>
+                                    <p class="text-2xl font-800 text-slate-900">Ksh 31,500</p>
+                                    <p class="text-xs text-slate-500 mt-2">Paid for Feb 2026</p>
+                                </div>
+                            </div>
+
+                            <h5 class="font-bold mb-4 text-slate-900">Recent Transactions</h5>
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-left text-sm">
+                                    <thead>
+                                        <tr class="text-slate-400 font-bold border-b border-slate-100">
+                                            <th class="pb-4">Unit</th>
+                                            <th class="pb-4">Tenant</th>
+                                            <th class="pb-4">Date</th>
+                                            <th class="pb-4">Amount</th>
+                                            <th class="pb-4">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-slate-50">
+                                        <tr class="hover:bg-slate-50 transition">
+                                            <td class="py-4 font-bold text-slate-700">A102</td>
+                                            <td class="py-4 text-slate-600 font-medium">Jane Mutua</td>
+                                            <td class="py-4 text-slate-500">Feb 05, 2026</td>
+                                            <td class="py-4 font-bold text-slate-900">Ksh 65,000</td>
+                                            <td class="py-4"><span class="px-2 py-1 bg-green-100 text-green-600 rounded-md text-xs font-bold">Via M-Pesa</span></td>
+                                        </tr>
+                                        <tr class="hover:bg-slate-50 transition">
+                                            <td class="py-4 font-bold text-slate-700">B205</td>
+                                            <td class="py-4 text-slate-600 font-medium">David Otieno</td>
+                                            <td class="py-4 text-slate-500">Feb 04, 2026</td>
+                                            <td class="py-4 font-bold text-slate-900">Ksh 45,000</td>
+                                            <td class="py-4"><span class="px-2 py-1 bg-green-100 text-green-600 rounded-md text-xs font-bold">Via M-Pesa</span></td>
+                                        </tr>
+                                        <tr class="hover:bg-slate-50 transition">
+                                            <td class="py-4 font-bold text-slate-700">C301</td>
+                                            <td class="py-4 text-slate-600 font-medium">Sarah Kamau</td>
+                                            <td class="py-4 text-slate-500">Pending</td>
+                                            <td class="py-4 font-bold text-slate-900">Ksh 85,000</td>
+                                            <td class="py-4"><span class="px-2 py-1 bg-orange-100 text-orange-600 rounded-md text-xs font-bold">Invoiced</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Property Listings Preview -->
+    <section id="listings" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-12 gap-4">
+                <h2 class="text-3xl font-800">Premium Units for Rent</h2>
+                <div class="flex gap-2">
+                    <button class="p-3 bg-slate-100 rounded-xl hover:bg-slate-200"><i class="fas fa-filter mr-2"></i> Filter</button>
+                    <button class="p-3 bg-slate-100 rounded-xl hover:bg-slate-200">Map View</button>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Listing 1 -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-3xl mb-4">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Apartment" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-4 left-4 flex gap-2">
+                            <span class="px-3 py-1 bg-white/90 backdrop-blur rounded-full text-xs font-bold text-slate-900 shadow-sm">Kileleshwa</span>
+                            <span class="px-3 py-1 bg-cyan-500 text-white rounded-full text-xs font-bold shadow-sm">Verified</span>
+                        </div>
+                        <div class="absolute bottom-4 left-4">
+                            <p class="text-2xl font-800 text-white drop-shadow-lg">Ksh 120,000 <small class="text-sm font-normal">/mo</small></p>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold group-hover:text-cyan-600 transition">Azure Luxury Suites</h3>
+                    <p class="text-slate-500 text-sm mb-4"><i class="fas fa-map-marker-alt mr-1"></i> Riverside Drive, Nairobi</p>
+                    <div class="flex items-center gap-4 text-slate-600 text-sm font-semibold border-t border-slate-100 pt-4">
+                        <span><i class="fas fa-bed text-cyan-500 mr-2"></i> 3 Beds</span>
+                        <span><i class="fas fa-bath text-cyan-500 mr-2"></i> 2 Baths</span>
+                        <span><i class="fas fa-expand text-cyan-500 mr-2"></i> 1,800 sqft</span>
+                    </div>
+                </div>
+
+                <!-- Listing 2 -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-3xl mb-4">
+                        <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Apartment" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-4 left-4 flex gap-2">
+                            <span class="px-3 py-1 bg-white/90 backdrop-blur rounded-full text-xs font-bold text-slate-900 shadow-sm">Nyali</span>
+                        </div>
+                        <div class="absolute bottom-4 left-4">
+                            <p class="text-2xl font-800 text-white drop-shadow-lg">Ksh 85,000 <small class="text-sm font-normal">/mo</small></p>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold group-hover:text-cyan-600 transition">Ocean Breeze Heights</h3>
+                    <p class="text-slate-500 text-sm mb-4"><i class="fas fa-map-marker-alt mr-1"></i> Near Haller Park, Mombasa</p>
+                    <div class="flex items-center gap-4 text-slate-600 text-sm font-semibold border-t border-slate-100 pt-4">
+                        <span><i class="fas fa-bed text-cyan-500 mr-2"></i> 2 Beds</span>
+                        <span><i class="fas fa-bath text-cyan-500 mr-2"></i> 1 Bath</span>
+                        <span><i class="fas fa-expand text-cyan-500 mr-2"></i> 1,200 sqft</span>
+                    </div>
+                </div>
+
+                <!-- Listing 3 -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-3xl mb-4 text-center bg-slate-100 flex flex-col items-center justify-center h-64 border-2 border-dashed border-slate-300">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-slate-400 mb-4 shadow-sm">
+                            <i class="fas fa-plus text-xl"></i>
+                        </div>
+                        <p class="font-bold text-slate-500">Your Property Here?</p>
+                        <p class="text-sm text-slate-400 max-w-[200px] mt-2">List with us and reach 10,000+ verified tenants.</p>
+                        <button class="mt-4 text-cyan-600 font-bold text-sm">Start Onboarding →</button>
+                    </div>
+                    <h3 class="text-xl font-bold opacity-0">Placeholder</h3>
+                    <p class="text-slate-500 text-sm mb-4 opacity-0">Placeholder</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- M-Pesa Integration Demo -->
+    <div id="payment-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[100] hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-8 shadow-2xl relative">
+            <button onclick="closePortal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-900 transition"><i class="fas fa-times"></i></button>
+            <div class="text-center mb-8">
+                <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-mobile-alt text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-800 text-slate-900">Tenant Pay Station</h3>
+                <p class="text-slate-500">Real-time automated rent payment via M-Pesa</p>
+            </div>
+            
+            <form onsubmit="event.preventDefault(); initiatePayment();" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-slate-400 uppercase mb-2">M-Pesa Number</label>
+                    <input type="text" placeholder="07XX XXX XXX" class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 transition">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-400 uppercase mb-2">Amount to Pay (Ksh)</label>
+                    <input type="number" value="65000" class="w-full p-4 bg-slate-100 border border-slate-200 rounded-xl text-slate-500 cursor-not-allowed font-bold" disabled>
+                </div>
+                <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-4 rounded-xl shadow-lg shadow-green-200 transition">
+                    Send Payment Prompt
+                </button>
+                <p class="text-center text-[10px] text-slate-400">By paying, you agree to our fair housing terms. An official receipt will be generated and emailed to you instantly.</p>
+            </form>
+            
+            <div id="payment-status" class="hidden mt-6 p-4 bg-green-50 rounded-xl border border-green-100">
+                <div class="flex items-center gap-3">
+                    <div class="animate-spin h-5 w-5 border-2 border-green-600 border-t-transparent rounded-full"></div>
+                    <p class="text-sm text-green-700 font-bold tracking-tight">Check your phone for the PIN prompt...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl font-800 mb-6">Let's Future-Proof Your Rental Income.</h2>
+                    <p class="text-slate-400 mb-8 text-lg">Whether you have a single unit or a massive apartment block, we are the management partner you've been searching for.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-cyan-400 shrink-0">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold">Our Headquarters</h5>
+                                <p class="text-slate-400">GTC Office Tower, 14th Floor, Westlands, Nairobi.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-cyan-400 shrink-0">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold">Call Us Directly</h5>
+                                <p class="text-slate-400">+254 700 123 456 / +254 788 000 000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-10 rounded-3xl text-slate-900 shadow-2xl">
+                    <h4 class="text-2xl font-800 mb-6">Request a Proposal</h4>
+                    <form class="space-y-4">
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <input type="text" placeholder="Full Name" class="w-full p-4 bg-slate-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-500 transition">
+                            <input type="email" placeholder="Email Address" class="w-full p-4 bg-slate-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-500 transition">
+                        </div>
+                        <input type="text" placeholder="Property Location (e.g. Kilimani)" class="w-full p-4 bg-slate-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-500 transition">
+                        <textarea rows="4" placeholder="How many units do you have?" class="w-full p-4 bg-slate-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-500 transition"></textarea>
+                        <button class="w-full btn-futuristic text-white font-bold py-4 rounded-xl shadow-lg transition">Send Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white border-t border-white/10 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-white/10 rounded flex items-center justify-center text-cyan-400">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <span class="text-lg font-800 tracking-tight">REALFUTURISTIC</span>
+                </div>
+                <div class="flex gap-6 text-slate-400 text-sm font-medium">
+                    <a href="#" class="hover:text-white transition">Terms of Service</a>
+                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition">Agency Fees</a>
+                </div>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-cyan-500 transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-cyan-500 transition"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-cyan-500 transition"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <p class="text-center text-slate-500 text-xs mt-12">© 2026 Real Futuristic Agency Ltd. EARB Registered. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function showPortal(type) {
+            document.getElementById('payment-modal').classList.remove('hidden');
+            document.getElementById('payment-modal').classList.add('flex');
+        }
+
+        function closePortal() {
+            document.getElementById('payment-modal').classList.add('hidden');
+            document.getElementById('payment-modal').classList.remove('flex');
+            document.getElementById('payment-status').classList.add('hidden');
+        }
+
+        function initiatePayment() {
+            document.getElementById('payment-status').classList.remove('hidden');
+            setTimeout(() => {
+                alert("M-Pesa STK Push has been sent to your phone! Please enter your PIN to complete the rent payment for February 2026.");
+                closePortal();
+            }, 2000);
+        }
+
+        // Smooth reveal on scroll for dashboard elements
+        window.addEventListener('scroll', () => {
+            const dashboard = document.getElementById('dashboard');
+            const pos = dashboard.getBoundingClientRect().top;
+            const screen = window.innerHeight;
+            if(pos < screen) {
+                // Animation triggers could go here
+            }
+        });
+    </script>
+</body>
+</html>
